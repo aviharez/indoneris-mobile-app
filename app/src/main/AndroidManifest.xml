@@ -41,7 +41,12 @@
             </intent-filter>
         </service>
         
-        <activity android:name=".feature.mhs.MhsMainActivity">
+        <activity android:name=".feature.mhs.MhsMainActivity"
+                android:theme="@style/NoActionBar">
+        </activity>
+
+        <activity android:name=".feature.admin.AdminMainActivity">
+
         </activity>
     </application>
 

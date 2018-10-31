@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/navi_event"
+            android:checked="false"
+            android:title="Acara"
+            android:icon="@drawable/mhs_event_icon"/>
+
+    <item
+            android:id="@+id/navi_achv"
+            android:checked="false"
+            android:title="Pencapaian"
+            android:icon="@drawable/mhs_acv_icon"/>
+
+    <item
+            android:id="@+id/navi_profil"
+            android:checked="false"
+            android:title="Profil"
+            android:icon="@drawable/mhs_profil_icon"/>
+
+
+</menu>
