@@ -10,7 +10,14 @@
     <FrameLayout
         android:id="@+id/main_contaner"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnav">
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
 
     </FrameLayout>
 
