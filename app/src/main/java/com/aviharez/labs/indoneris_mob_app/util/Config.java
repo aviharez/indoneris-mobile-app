@@ -12,6 +12,6 @@ public class Config {
 
     public static final String SHARED_PREF = "INDONERIS";
 
-    public static final String mainUrl = "https:/mankmedia.com";
+    public static final String mainUrl = "https:/mankmedia.com/api/";
 
 }

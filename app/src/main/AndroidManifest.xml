@@ -16,13 +16,12 @@
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
-        
         <activity
                 android:name=".feature.SplashScreen"
                 android:theme="@style/NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-        
+    
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
@@ -30,17 +29,20 @@
                 android:name=".feature.LoginActivity"
                 android:theme="@style/NoActionBar">
         </activity>
-    
+        
         <service android:name=".firebase.MyFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
         <service android:name=".firebase.FirebaseIDService">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
             </intent-filter>
         </service>
+        
+        <activity android:name=".feature.mhs.MhsMainActivity">
+        </activity>
     </application>
 
 </manifest>
