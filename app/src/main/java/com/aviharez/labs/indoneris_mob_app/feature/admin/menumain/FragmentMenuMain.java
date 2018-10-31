@@ -1,4 +1,4 @@
-package com.aviharez.labs.indoneris_mob_app.feature.admin;
+package com.aviharez.labs.indoneris_mob_app.feature.admin.menumain;
 
 
 import android.os.Bundle;
@@ -12,10 +12,10 @@ import com.aviharez.labs.indoneris_mob_app.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragmentMenuEvent extends Fragment {
+public class FragmentMenuMain extends Fragment {
 
 
-    public FragmentMenuEvent() {
+    public FragmentMenuMain() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class FragmentMenuEvent extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fragment_menu_event, container, false);
+        return inflater.inflate(R.layout.fragment_fragment_menu_main, container, false);
     }
 
 }
