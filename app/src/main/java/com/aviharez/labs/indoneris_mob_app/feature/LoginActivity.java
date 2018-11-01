@@ -57,11 +57,11 @@ public class LoginActivity extends AppCompatActivity {
         final String role = pref.getString("role", "z");
 
 
-        if (login && role.equals("a")) {
+        if (login && role.equals("A")) {
             Intent i = new Intent(LoginActivity.this, AdminMainActivity.class);
             startActivity(i);
             finish();
-        } else if (login && role.equals("m")) {
+        } else if (login && role.equals("M")) {
             Intent i = new Intent(LoginActivity.this, MhsMainActivity.class);
             startActivity(i);
             finish();

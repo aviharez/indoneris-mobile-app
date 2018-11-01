@@ -1,14 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".feature.mhs.profil.MhsProfilFragment">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".feature.mhs.profil.MhsProfilFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+            android:orientation="horizontal"
+            android:background="@drawable/gradient"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="halaman profil"/>
+            android:id="@+id/ll_toolbar"
+            android:elevation="8dp"
+            android:layout_height="80dp">
 
-</FrameLayout>
+        <TextView
+                android:layout_gravity="center_vertical"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                android:textColor="#fff"
+                android:id="@+id/tv_judul_atas"
+                android:layout_marginTop="10dp"
+                android:text="Profil Mahasiswa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:id="@+id/linearLayout"
+                  android:layout_below="@id/ll_toolbar">
+
+        <ImageView android:layout_width="100dp" android:layout_height="100dp"
+                   android:src="@drawable/mhs_bg_event"
+                   android:id="@+id/iv_foto"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/tv_nama_mhs"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/tv_tgl_lahir"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/tv_tempat_lahir"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/tv_jk"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/tv_email"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/tv_skkm"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/linearLayout"
+                                            android:id="@+id/rv_history_point">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

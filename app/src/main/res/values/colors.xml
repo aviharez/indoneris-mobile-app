@@ -5,6 +5,9 @@
     <color name="colorAccent">#64F6FF</color>
     <color name="colorBg">#F2F8FB</color>
 
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
     <color name="colorPurpleG1">#6B17A1</color>
     <color name="colorBlueG2">#3827B3</color>
 </resources>
