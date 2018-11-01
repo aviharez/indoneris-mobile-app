@@ -8,28 +8,45 @@
     <!-- TODO: Update blank fragment layout -->
 
 <LinearLayout
+    android:id="@+id/Tvpeserta"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:layout_margin="15dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_peserta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="Efendi"/>
     <TextView
         android:id="@+id/tv_peserta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="Efendi"/>
+        android:text="ots"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Tvpeserta"
+        android:orientation="horizontal">
 
     <Button
         android:id="@+id/btn_ok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ok" />
+        android:text="Accept" />
 
     <Button
+        android:id="@+id/btn_cencel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toStartOf="@+id/btn_ok"
-        android:text="Cancel" />
+        android:text="Cencel" />
 
 </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

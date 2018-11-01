@@ -1,16 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              tools:context=".feature.admin.nextEvent.FragmentEventBaru">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+  <!--  <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
         android:gravity="center"
         android:textSize="30dp"
-            android:text="@string/title_EventBaru"/>
+            android:text="@string/title_EventBaru"/> -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <EditText
+            android:id="@+id/EdTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Judul Event"/>
+        <EditText
+            android:id="@+id/EdDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi"/>
+
+        <Spinner
+            android:id="@+id/SpPenyelenggara"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </Spinner>
+        <EditText
+            android:id="@+id/EdDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Tanggal"
+            android:focusable="false"
+            android:inputType="date"/>
+        <EditText
+            android:id="@+id/EdBiaya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Biaya"/>
+        <EditText
+            android:id="@+id/Edkuota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kuota Peserta"
+            android:inputType="number"/>
+        <EditText
+            android:id="@+id/EdSkkm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Jumlah SKKM"
+            android:inputType="number"/>
+        <Button
+            android:id="@+id/BtnUpImgEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ambil gambar"/>
+        <Button
+            android:id="@+id/BtnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Submit"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
