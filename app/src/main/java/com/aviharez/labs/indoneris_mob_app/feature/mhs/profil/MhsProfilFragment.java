@@ -65,6 +65,7 @@ public class MhsProfilFragment extends Fragment {
         tv_skkm = (TextView) v.findViewById(R.id.tv_skkm);
         tv_email = (TextView) v.findViewById(R.id.tv_email);
 
+
         iv_foto = (ImageView) v.findViewById(R.id.iv_foto);
 
         rv_history = (RecyclerView) v.findViewById(R.id.rv_history_point);

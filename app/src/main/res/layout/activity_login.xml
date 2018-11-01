@@ -4,81 +4,76 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
                 tools:context=".feature.LoginActivity">
     
     <ImageView
+        android:id="@+id/img_apps"
             android:layout_width="265dp"
             android:layout_height="70dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/_100sdp" />
-    
+
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:padding="40dp"
+        android:elevation="10dp"
+        android:background="@drawable/bg_biobulat"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_above="@id/bt_login"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPurpleG1"
+            android:text="Sign in"/>
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_above="@id/tv_lost"
-            android:layout_marginBottom="@dimen/_64sdp"
-            android:elevation="10dp"
-            android:layout_marginTop="@dimen/_16sdp"
-            android:layout_marginLeft="@dimen/_36sdp"
-            android:layout_marginRight="@dimen/_36sdp">
-        
-        <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_16sdp"
-                android:layout_marginTop="@dimen/_32sdp"
-                android:layout_marginRight="@dimen/_16sdp">
-            
+            android:layout_marginBottom="15dp">
             <android.support.design.widget.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="USERNAME"
-                    android:textSize="@dimen/_12sdp"
-                    android:id="@+id/et_user"
-                    android:inputType="text"/>
-        
+                android:id="@+id/et_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number|textAutoComplete"
+                android:hint="NIM"/>
         </android.support.design.widget.TextInputLayout>
-        
         <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_16sdp"
-                android:layout_marginRight="@dimen/_16sdp"
-                app:passwordToggleEnabled="true">
-            
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <android.support.design.widget.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="PASSWORD"
-                    android:textSize="@dimen/_12sdp"
-                    android:id="@+id/et_pass"
-                    android:inputType="textPassword"/>
-        
-        </android.support.design.widget.TextInputLayout>
-        
-        <Button
+                android:id="@+id/et_pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/bt_login"
-                android:text="LOGIN"
-                android:textColor="@android:color/white"
-                android:paddingTop="@dimen/_16sdp"
-                android:paddingBottom="@dimen/_16sdp"
-                android:clickable="true"
-                android:layout_marginTop="@dimen/_16sdp"/>
-    
+                android:inputType="textPassword|textAutoComplete"
+                android:hint="Password"/>
+        </android.support.design.widget.TextInputLayout>
+
     </LinearLayout>
-    
+
     <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_lost"
-            android:layout_alignParentBottom="true"
-            android:text="Lost your password?"
-            android:textColor="@android:color/white" />
+        android:id="@+id/bt_login"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_bulat"
+        android:layout_marginBottom="150dp"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="LOGIN"
+        android:elevation="10dp"
+        android:textColor="@android:color/white" />
+
     
     <!--
     <ScrollView

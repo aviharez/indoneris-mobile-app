@@ -112,7 +112,7 @@ public class DetailEventActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                     }
-                })
+                });
             }
         });
 

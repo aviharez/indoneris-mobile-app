@@ -47,16 +47,16 @@ public class FragmentEventBaru extends Fragment {
       spPenyelenggara = (Spinner) v.findViewById(R.id.SpPenyelenggara);
       Eddate = (EditText) v.findViewById(R.id.EdDate);
 
-      Eddate.setOnClickListener(new View.OnClickListener() {
+    /*  Eddate.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
               new DatePickerDialog(getActivity(), dateEvent, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show();
           }
-      });
+      }); */
       return v;
     }
 
-    DatePickerDialog.OnDateSetListener dateEvent = new DatePickerDialog.OnDateSetListener() {
+  /*  DatePickerDialog.OnDateSetListener dateEvent = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
             calendar.set(Calendar.YEAR);
@@ -70,5 +70,5 @@ public class FragmentEventBaru extends Fragment {
         String formatTanggal = "yyy-MM-dd";
         SimpleDateFormat sdf = new SimpleDateFormat(formatTanggal, Locale.US);
         Eddate.setText(sdf.format(calendar.getTime()));
-    }
+    } */
 }
