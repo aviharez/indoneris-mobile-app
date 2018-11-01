@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              tools:context=".feature.mhs.achvmnt.MhsAcvFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+            android:orientation="horizontal"
+            android:background="@drawable/gradient"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Halaman pencapaian"/>
+            android:elevation="8dp"
+            android:layout_height="100dp">
 
-</FrameLayout>
+        <TextView
+                android:layout_gravity="center_vertical"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                android:textColor="#fff"
+                android:text="Pencapaian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>

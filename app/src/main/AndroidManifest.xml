@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.aviharez.labs.indoneris_mob_app">
-    
+
     <uses-permission android:name="android.permission.INTERNET"/>
-    
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -11,17 +12,12 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
         <activity
                 android:name=".feature.SplashScreen"
                 android:theme="@style/NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-    
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
@@ -29,7 +25,7 @@
                 android:name=".feature.LoginActivity"
                 android:theme="@style/NoActionBar">
         </activity>
-        
+
         <service android:name=".firebase.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
@@ -40,13 +36,14 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
             </intent-filter>
         </service>
-        
-        <activity android:name=".feature.mhs.MhsMainActivity"
+
+        <activity
+                android:name=".feature.mhs.MhsMainActivity"
                 android:theme="@style/NoActionBar">
         </activity>
-
-        <activity android:name=".feature.admin.AdminMainActivity">
-
+        <activity android:name=".feature.admin.main.AdminMainActivity">
+        </activity>
+        <activity android:name=".feature.mhs.event.DetailEventActivity">
         </activity>
     </application>
 

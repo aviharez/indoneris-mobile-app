@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.aviharez.labs.indoneris_mob_app.R;
-import com.aviharez.labs.indoneris_mob_app.feature.admin.AdminMainActivity;
+import com.aviharez.labs.indoneris_mob_app.feature.admin.main.AdminMainActivity;
 import com.aviharez.labs.indoneris_mob_app.feature.mhs.MhsMainActivity;
 import com.aviharez.labs.indoneris_mob_app.rest.ApiClient;
 import com.aviharez.labs.indoneris_mob_app.rest.ApiService;
@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
 
         bt_login = (Button) findViewById(R.id.bt_login);
 
-        pref = getSharedPreferences(Config.mainUrl, MODE_PRIVATE);
+        pref = getSharedPreferences(Config.SHARED_PREF, MODE_PRIVATE);
 
         final boolean login = pref.getBoolean("login", false);
         final String role = pref.getString("role", "z");
@@ -71,11 +71,12 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 token = pref.getString("regId", "tidak ada");
+                String key = "ho7hhio98h";
                 userName = et_user.getText().toString().trim();
                 passWord = et_pass.getText().toString().trim();
 
                 if (!userName.isEmpty() && !passWord.isEmpty()) {
-                    checkLogin(userName, passWord, token);
+                    checkLogin(key, userName, passWord, token);
                 } else {
                     Toast.makeText(getApplicationContext(), "Lengkapi data terlebih dahulu", Toast.LENGTH_SHORT).show();
                 }
@@ -84,9 +85,10 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    private void checkLogin(final String userName, final String passWord, final String token) {
+    private void checkLogin(final String key, final String userName, final String passWord, final String token) {
         String tag_req = "req_login";
-        String key = "jkhf7h2qke";
+
+        Log.e(TAG, "Cek");
         apiService.loginRequest(key, userName, passWord, token).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -96,7 +98,7 @@ public class LoginActivity extends AppCompatActivity {
                         String role = jsonObject.getString("role");
 
                         SharedPreferences.Editor editor = pref.edit();
-                        if (role.equals("a")) {
+                        if (role.equals("A")) {
                             editor.putString("role", role);
                             editor.putBoolean("login", true);
                             editor.putString("username", userName);
@@ -104,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
                             Intent i = new Intent(LoginActivity.this, AdminMainActivity.class);
                             startActivity(i);
                             finish();
-                        } else if (role.equals("m")) {
+                        } else if (role.equals("M")) {
                             editor.putString("role", role);
                             editor.putBoolean("login", true);
                             editor.putString("username", userName);

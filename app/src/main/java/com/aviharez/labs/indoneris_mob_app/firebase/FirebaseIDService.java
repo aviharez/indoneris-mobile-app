@@ -46,13 +46,13 @@ public class FirebaseIDService extends FirebaseInstanceIdService {
         final int login = pref.getInt("login", 0);
         if (login == 1) {
             String username = pref.getString("username", "gagal");
-            RequestBody body = new FormBody.Builder().add("token", token).add("username", username).build();
+            /*RequestBody body = new FormBody.Builder().add("token", token).add("username", username).build();
             Request request = new Request.Builder().url(Config.mainUrl).post(body).build();
             try {
                 client.newCall(request).execute();
             } catch (Exception e) {
                 e.printStackTrace();
-            }
+            }*/
         }
     }
 }

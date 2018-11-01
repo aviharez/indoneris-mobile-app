@@ -21,10 +21,11 @@
             android:layout_marginStart="0dp"
             android:background="?android:attr/windowBackground"
             android:layout_alignParentBottom="true"
-            android:fitsSystemWindows="true"
             android:animateLayoutChanges="false"
             android:splitMotionEvents="false"
             android:layout_centerHorizontal="true"
+            app:itemIconTint="@drawable/nav_item_color_state"
+            app:itemTextColor="@drawable/nav_item_color_state"
             app:menu="@menu/mhs_botnav_item"/>
 
 </RelativeLayout>
