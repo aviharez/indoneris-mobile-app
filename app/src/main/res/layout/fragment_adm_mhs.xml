@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".feature.admin.mhs.AdmMhsFragment">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/gradient"
+            android:layout_width="match_parent"
+            android:elevation="8dp"
+            android:id="@+id/linearLayout"
+            android:layout_height="230dp"
+            android:paddingTop="32dp">
+
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="Program Studi"
+                  android:layout_marginLeft="16dp"
+                  android:textColor="@color/white"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="40dp"
+                      android:layout_margin="16dp"
+                      android:background="@color/white">
+
+            <Spinner android:layout_width="match_parent" android:layout_height="wrap_content"
+                     android:layout_marginTop="4dp"
+                     android:id="@+id/sp_prodi">
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="Kelas"
+                  android:layout_marginLeft="16dp"
+                  android:textColor="@color/white"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="40dp"
+                      android:layout_margin="16dp"
+                      android:background="@color/white">
+
+            <Spinner android:layout_width="match_parent" android:layout_height="wrap_content"
+                     android:layout_marginTop="4dp"
+                     android:id="@+id/sp_kelas">
+
+            </Spinner>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content"
+                 android:id="@+id/loading"
+                 android:visibility="invisible"
+                 android:layout_centerInParent="true"/>
+
+    <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/rv_mahasiswa"
+                                            android:clickable="true"
+                                            android:elevation="8dp"
+                                            android:layout_margin="8dp"
+                                            android:layout_below="@id/linearLayout"
+                                            android:layout_marginTop="8dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</RelativeLayout>

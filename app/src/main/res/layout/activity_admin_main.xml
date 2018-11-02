@@ -8,24 +8,24 @@
     tools:context=".feature.admin.main.AdminMainActivity">
 
     <FrameLayout
-        android:id="@+id/main_contaner"
+        android:id="@+id/frameContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/btnav">
-
-        <ListView
-            android:id="@+id/listview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </ListView>
-    </FrameLayout>
+        android:layout_above="@id/botNavAdm" />
 
     <android.support.design.widget.BottomNavigationView
-        android:id="@+id/btnav"
+        android:id="@+id/botNavAdm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
         android:layout_alignParentBottom="true"
+        android:animateLayoutChanges="false"
+        android:splitMotionEvents="false"
+        android:layout_centerHorizontal="true"
+        app:itemIconTint="@drawable/nav_item_color_state"
+        app:itemTextColor="@drawable/nav_item_color_state"
         app:menu="@menu/admin_botnav_item"/>
 
 </RelativeLayout>

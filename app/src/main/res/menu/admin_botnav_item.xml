@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menu_main"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_Main"/>
+        android:id="@+id/menu_mhs"
+        android:icon="@drawable/adm_mhs_icon"
+        android:title="Mahasiswa"/>
+
     <item
-        android:id="@+id/menu_eventlast"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:id="@+id/menu_add"
+        android:icon="@drawable/ic_add_box_black_24dp"
+        android:title="Tambah" />
+
+    <item
+        android:id="@+id/menu_event"
+        android:icon="@drawable/mhs_event_icon"
         android:title="@string/title_Event"/>
-    <item
-        android:id="@+id/menu_evenbaru"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="@string/title_EventBaru" />
+
 </menu>
