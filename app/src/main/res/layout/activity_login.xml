@@ -43,8 +43,8 @@
                 android:id="@+id/et_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number|textAutoComplete"
-                android:hint="NIM"/>
+                android:inputType="text|textAutoComplete"
+                android:hint="Username/NIM"/>
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"

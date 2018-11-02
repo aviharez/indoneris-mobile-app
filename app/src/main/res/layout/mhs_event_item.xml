@@ -21,6 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 android:scaleType="centerCrop"
+                android:paddingRight="15dp"
                 android:background="#2d2d2d"/>
 
         <TextView
