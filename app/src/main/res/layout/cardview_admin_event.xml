@@ -17,7 +17,7 @@
             android:layout_height="120dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:src="@drawable/ic_dashboard_black_24dp"
+            android:src="@drawable/icon"
             android:layout_marginRight="6dp"/>
 
         <TextView

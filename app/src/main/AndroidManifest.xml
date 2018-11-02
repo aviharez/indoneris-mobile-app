@@ -41,7 +41,8 @@
                 android:name=".feature.mhs.MhsMainActivity"
                 android:theme="@style/NoActionBar">
         </activity>
-        <activity android:name=".feature.admin.main.AdminMainActivity">
+        <activity android:name=".feature.admin.main.AdminMainActivity"
+        android:theme="@style/NoActionBar">
         </activity>
         <activity android:name=".feature.mhs.event.DetailEventActivity"
         android:theme="@style/NoActionBar">

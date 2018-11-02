@@ -1,8 +1,6 @@
 package com.aviharez.labs.indoneris_mob_app.rest;
 
-import com.aviharez.labs.indoneris_mob_app.entity.NextEvent;
-import com.aviharez.labs.indoneris_mob_app.entity.ProfilMhs;
-import com.aviharez.labs.indoneris_mob_app.entity.RiwayatPoin;
+import com.aviharez.labs.indoneris_mob_app.entity.*;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -37,5 +35,25 @@ public interface ApiService {
     Call<ProfilMhs> profilMahasiswa(@Field("token") String token,
                                     @Field("detail") String detail,
                                     @Field("key") String key);
+
+    @FormUrlEncoded
+    @POST("shared/master/jurusan.php")
+    Call<List<Prodi>> listProdi(@Field("token") String token,
+                                @Field("key") String key,
+                                @Field("lists") String lists);
+
+    @FormUrlEncoded
+    @POST("shared/master/jurusan.php")
+    Call<List<Kelas>> listKelas(@Field("token") String token,
+                                @Field("key") String key,
+                                @Field("lists") String lists,
+                                @Field("id_jurusan") String id);
+
+    @FormUrlEncoded
+    @POST("admin/mahasiswa/show.php")
+    Call<List<DataMhs>> dataMahasiswa(@Field("key") String key,
+                                      @Field("show") String show,
+                                      @Field("token") String token,
+                                      @Field("id_kelas") String id);
 
 }

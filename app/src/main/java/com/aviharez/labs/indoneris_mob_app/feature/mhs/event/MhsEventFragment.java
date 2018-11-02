@@ -67,7 +67,8 @@ public class MhsEventFragment extends Fragment {
         rv_event_mhs = (RecyclerView) v.findViewById(R.id.rv_event);
 
         rv_event_mhs.setHasFixedSize(true);
-        rv_event_mhs.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
+        rv_event_mhs.setLayoutManager(layoutManager);
 
         rv_event_mhs.addOnItemTouchListener(new RecyclerTouchListener(getContext(), rv_event_mhs, new RecyclerTouchListener.ClickListener() {
             @Override

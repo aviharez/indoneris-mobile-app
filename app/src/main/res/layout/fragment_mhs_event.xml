@@ -47,6 +47,8 @@
                                             android:layout_centerHorizontal="true"
                                             android:layout_marginTop="40dp"
                                             android:elevation="24dp"
+                                            android:clipToPadding="true"
+                                            android:clickable="true"
                                             android:layout_below="@id/sp_penyelenggara"
                                             android:id="@+id/rv_event">
 
