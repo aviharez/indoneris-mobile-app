@@ -1,10 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".feature.admin.menumain.AdminAddFragment">
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".feature.admin.nextEvent.AdminEventFragment">
 
+    <!-- TODO: Update blank fragment layout -->
+    <!--  <TextView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+          android:gravity="center"
+          android:textSize="30dp"
+              android:text="@string/title_EventBaru"/> -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:padding="15dp"
+            android:background="@drawable/bg_biobulat"
+            android:elevation="8dp"
+            android:orientation="vertical">
 
+        <TextView android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+                  android:layout_gravity="center|fill_vertical"
+                  android:textSize="25sp"
+                  android:gravity="center_vertical"
+                  android:textColor="@color/colorPurpleG1"
+                  android:layout_marginBottom="10dp"
+                  android:textStyle="bold"
+        android:text="Tambah Event Baru"/>
+
+        <EditText
+                android:id="@+id/EdTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Judul Event"/>
+        <EditText
+                android:id="@+id/EdDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Deskripsi"/>
+
+        <Spinner
+                android:id="@+id/SpPenyelenggara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        android:outlineAmbientShadowColor="@color/colorPurpleG1">
+        </Spinner>
+        <EditText
+                android:id="@+id/EdDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Tanggal"
+                android:focusable="false"
+                android:inputType="date"/>
+        <EditText
+                android:id="@+id/EdBiaya"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Biaya"/>
+        <EditText
+                android:id="@+id/Edkuota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kuota Peserta"
+                android:inputType="number"/>
+        <EditText
+                android:id="@+id/EdSkkm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jumlah SKKM"
+                android:inputType="number"/>
+        <Button
+                android:id="@+id/BtnUpImgEvent"
+                android:layout_width="200dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bulat"
+                android:textAllCaps="false"
+                android:text="Ambil gambar"/>
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/BtnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bggradient"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:text="Upload"/>
 
 </RelativeLayout>
